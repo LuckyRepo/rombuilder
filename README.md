@@ -7,5 +7,11 @@ Quick Setup
 ```bash
 wget https://raw.githubusercontent.com/LuckyRepo/rombuilder/master/prep.sh
 chmod 777 prep.sh
-./start.sh
+./prep.sh
 ```
+
+or
+```bash
+wget https://raw.githubusercontent.com/LuckyRepo/rombuilder/master/prep.sh && chmod 777 prep.sh && ./prep.sh
+```
+
