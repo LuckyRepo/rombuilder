@@ -18,6 +18,15 @@
 		./jack-admin start-server
             echo -e '\e[32mSet Jack Server to -Xmx6g\e[0m'
     cd $OLDPWD
+# Ask if they want to sync in yes or no
+	read -p "Do you want to sync before building? y/n" syncchoice
+	case "$syncchoice" in 
+  		y|Y ) repo sync --forcesync;;
+  		n|N ) echo -e '\e[96mSkipping Sync\e[0m';;
+		b|B ) repo sync -c -f -j8 --force-sync --no-clone-bundle --no-tags
+  	* ) echo "invalid";;
+	esac
+# Start Build leaving lunch and make for user
 	    echo -e '\e[32mMarking start of build\e[0m'
             sleep 1
             source build/envsetup.sh
