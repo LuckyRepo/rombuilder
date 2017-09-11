@@ -22,7 +22,7 @@
 	echo "Do you wish to sync the repo?"
 	select yn in "Yes" "No"; do
     		case $yn in
-        		Yes ) echo -e '\e[96mStarting Sync\e[0m'; repo sync --force-sync;;
+        		Yes ) echo -e '\e[96mStarting Sync\e[0m'; repo sync --force-sync && break;;
         		No ) echo -e '\e[96mSkipping Sync\e[0m'; break;;
     		esac
 	done
