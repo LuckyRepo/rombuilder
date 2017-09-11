@@ -30,5 +30,6 @@
 	    echo -e '\e[32mMarking start of build\e[0m'
             sleep 1
             source build/envsetup.sh
-	    echo -e '\e[91mYou are now ready for lunch or brunch. Turning controls back to you.\e[0m'
+	    echo -e '\e[91mYou are now ready for lunch. Turning controls back to you.\e[0m'
+	    lunch
             exit
