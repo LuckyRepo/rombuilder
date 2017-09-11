@@ -1,4 +1,4 @@
-# AOSiP-Helper-Bot
+# ROMBuilder
 ### Script to enable a quick setup for ROM building including setting CCACHE and Jack Server.
 **Created for lazy people who build on Linux.**
 
