@@ -19,7 +19,7 @@
             echo -e '\e[32mSet Jack Server to -Xmx6g\e[0m'
     cd $OLDPWD
 # Ask if they want to sync in yes or no
-	echo "Do you wish to install this program?"
+	echo "Do you wish to sync the repo?"
 	select yn in "Yes" "No"; do
     		case $yn in
         		Yes ) echo -e '\e[96mStarting Sync\e[0m'; repo sync --force-sync;;
