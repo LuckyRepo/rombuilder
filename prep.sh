@@ -1,6 +1,6 @@
 #/bin/bash
 	clear
-	echo -e '\e[104mRomBuilder by LuckyRepo v0.0.2\e[0m'
+	echo -e '\e[104mRomBuilder by LuckyRepo v0.0.3\e[0m'
 	echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
 # Set PATH for all REPO commands
 	PATH=~/bin:$PATH
@@ -19,7 +19,7 @@
             echo -e '\e[32mSet Jack Server to -Xmx6g\e[0m'
     cd $OLDPWD
 # Ask if they want to sync in yes or no
-	echo "Do you wish to sync the repo?"
+	echo -e '\e[32mDo you wish to sync the repo?\e[0m'
 	select yn in "Yes" "No"; do
     		case $yn in
         		Yes ) echo -e '\e[96mStarting Sync\e[0m'; repo sync --force-sync && break;;
@@ -30,6 +30,13 @@
 	    echo -e '\e[32mMarking start of build\e[0m'
             sleep 1
             source build/envsetup.sh
-	    echo -e '\e[91mYou are now ready for lunch. Turning controls back to you.\e[0m'
-	    lunch
+# Ask if they want to sync in yes or no
+	echo -e '\e[32mLunch or Brunch?\e[0m'
+	select lb in "Lunch" "Brunch"; do
+    		case $lb in
+        		Lunch ) echo -e '\e[96mUsing Lunch\e[0m'; lunch && break;;
+        		Brunch ) echo -e '\e[96mUsing Brunch\e[0m'; brunch && break;;
+    		esac
+	done
+	    echo -e '\e[91mTurning controls back to you.\e[0m'
             exit
