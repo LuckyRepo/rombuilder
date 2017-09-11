@@ -1,16 +1,16 @@
 #/bin/bash
 	clear
-	echo -e '\e[104mRomBuilder by LuckyRepo v0.0.1\e[0m'
+	echo -e '\e[104mRomBuilder by LuckyRepo v0.0.2\e[0m'
 	echo -e '\e[91mThis build still contains test code. Not for daily use. Devs and testers Only.\e[0m'
 # Set PATH for all REPO commands
 	PATH=~/bin:$PATH
-	echo -e '\e[96mChanged BIN Path to current folder to allow for Repo commands\e[0m'
+	echo -e '\e[32mChanged BIN Path to current folder to allow for Repo commands\e[0m'
 # Set CCACHE up
 		prebuilts/misc/linux-x86/ccache/ccache -M 100G
 		export CCACHE_DIR=/CCACHE
 		export USE_CCACHE=1
 		export CCACHE_COMPRESS=1
-    	echo -e '\e[96mSet CCACHE to 100G, set compression and set use to 1\e[0m'
+    	echo -e '\e[32mSet CCACHE to 100G, set compression and set use to 1\e[0m'
 # Set Jack server to use 6g to avoid build errors
 		cd $PWD/prebuilts/sdk/tools
 		./jack-admin stop-server
