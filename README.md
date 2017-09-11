@@ -12,6 +12,6 @@ chmod 777 prep.sh
 
 or
 ```bash
-wget https://raw.githubusercontent.com/LuckyRepo/rombuilder/master/prep.sh && chmod 777 prep.sh && ./prep.sh
+wget https://raw.githubusercontent.com/LuckyRepo/rombuilder/master/prep.sh && chmod 777 prep.sh && clear && ./prep.sh
 ```
 
