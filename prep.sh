@@ -26,11 +26,11 @@
         		No ) echo -e '\e[96mSkipping Sync\e[0m'; break;;
     		esac
 	done
-# Start Build leaving lunch and make for user
+# Start Build
 	    echo -e '\e[32mMarking start of build\e[0m'
             sleep 1
             source build/envsetup.sh
-# Ask if they want to sync in yes or no
+# Ask if they want lunch or brunch
 	echo -e '\e[32mLunch or Brunch?\e[0m'
 	select lb in "Lunch" "Brunch"; do
     		case $lb in
